@@ -40,7 +40,7 @@ async function loadPostsCollection() {
     const client = await mongodb.MongoClient.connect('mongodb://heroku_t5qmpg43:ZJ9jyyjUZLrXj93@ds227185.mlab.com:27185/heroku_t5qmpg43', {
         useNewUrlParser: true
     });
-    return client.db('vue_express').collection('beers');
+    return client.db('heroku_t5qmpg43').collection('beers');
 }
 
 module.exports = router;
