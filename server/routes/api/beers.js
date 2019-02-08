@@ -4,13 +4,13 @@ const mongodb = require('mongodb');
 const router = express.Router();
 
 // Get Posts
-router.get('/', async (req, res) => {
+router.get('/api/beers', async (req, res) => {
     const beers = await loadPostsCollection();
     res.send(await beers.find({}).toArray());
 });
 
 // Add Posts
-router.post('/', async (req, res) => {
+router.post('/api/beers', async (req, res) => {
     const beers = await loadPostsCollection();
     await beers.insertOne({
         name: req.body.name,
