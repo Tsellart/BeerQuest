@@ -37,7 +37,7 @@ router.delete('/:id', async (req, res) => {
 // });
 
 async function loadPostsCollection() {
-    const client = await mongodb.MongoClient.connect('mongodb://heroku_t5qmpg43:ZJ9jyyjUZLrXj93@ds127439.mlab.com:27439/vue_express', {
+    const client = await mongodb.MongoClient.connect('mongodb://heroku_t5qmpg43:ZJ9jyyjUZLrXj93@ds227185.mlab.com:27185/heroku_t5qmpg43', {
         useNewUrlParser: true
     });
     return client.db('vue_express').collection('beers');
